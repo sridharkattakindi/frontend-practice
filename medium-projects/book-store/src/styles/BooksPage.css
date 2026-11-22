@@ -1,0 +1,101 @@
+.books {
+    margin-top: 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.books h2 {
+    text-align: center;
+    color: #212529;
+    margin-bottom: 24px;
+}
+
+.books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 20px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.search {
+    text-align: right;
+}
+
+.add-link {
+    display: inline-block;
+    margin: 0 20px 16px;
+    padding: 8px 14px;
+    background: #0d6efd;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.add-link:hover {
+    background: #0b5ed7;
+}
+
+.libook {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    background-color: #f1f3f5;
+    color: #212529;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.libook a {
+    flex: 1;
+    min-width: 0;
+    color: #212529;
+    text-decoration: none;
+}
+
+.libook a:hover {
+    text-decoration: underline;
+}
+
+.libook i[class*="bi-heart"],
+.libook i.delete-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.12s ease, color 0.12s ease;
+    flex-shrink: 0;
+}
+
+.libook i[class*="bi-heart"]:hover,
+.libook i.delete-icon:hover {
+    transform: scale(1.15);
+}
+
+.libook i.bi-heart-fill.text-danger {
+    color: green;
+}
+
+.libook i.bi-heart.text-secondary {
+    color: lightgray;
+}
+
+.libook i.bi.bi-trash.delete-icon {
+    color: red;
+}
+
+.books .bookimg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .books-list {
+        grid-template-columns: 1fr;
+    }
+}
